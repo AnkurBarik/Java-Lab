@@ -74,10 +74,10 @@ class CasualTypist extends Typist{
 
 public class InstDatabase {
   public static void main(String[] args){
-    Teacher t = new Teacher("T001", "Rohit", "Maths", "IEEE");
-    Officer o = new Officer("O001", "Rohan", "A");
-    RegularTypist rt = new RegularTypist("RT001", "Rohan", 100, 1000);
-    CasualTypist ct = new CasualTypist("CT001", "Rohan", 100, 100);
+    Teacher t = new Teacher("T001", "Ankur", "Maths", "IEEE");
+    Officer o = new Officer("O001", "Sayan", "A");
+    RegularTypist rt = new RegularTypist("RT001", "Sayan", 100, 1000);
+    CasualTypist ct = new CasualTypist("CT001", "Sayan", 100, 100);
     t.display();
     o.display();
     rt.display();
