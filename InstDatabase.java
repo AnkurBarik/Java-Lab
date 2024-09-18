@@ -4,6 +4,10 @@ class Staff{
     this.code = code;
     this.name = name;
   }
+  void display(){
+    System.out.println("Staff Code: " + code);
+    System.out.println("Staff Name: " + name);
+  }
 }
 
 class Teacher extends Staff{
@@ -13,6 +17,11 @@ class Teacher extends Staff{
     this.subject = subject;
     this.publication = publication;
   }
+  void display(){
+    super.display();
+    System.out.println("Subject: " + subject);
+    System.out.println("Publication: " + publication);
+  }
 }
 
 class Officer extends Staff{
@@ -20,6 +29,10 @@ class Officer extends Staff{
   Officer(String code, String name, String grade){
     super(code, name);
     this.grade = grade;
+  }
+  void display(){
+    super.display();
+    System.out.println("Grade: " + grade);
   }
 }
 
@@ -29,13 +42,21 @@ class Typist extends Staff{
     super(code, name);
     this.speed = speed;
   }
+  void display(){
+    super.display();
+    System.out.println("Speed: " + speed);
+  }
 }
 
 class RegularTypist extends Typist{
-  int dailyWages;
-  RegularTypist(String code, String name, int speed, int dailyWages){
+  int remuneration;
+  RegularTypist(String code, String name, int speed, int remuneration){
     super(code, name, speed);
-    this.dailyWages = dailyWages;
+    this.remuneration = remuneration;
+  }
+  void display(){
+    super.display();
+    System.out.println("Remuneration: " + remuneration);
   }
 }
 
@@ -45,5 +66,21 @@ class CasualTypist extends Typist{
     super(code, name, speed);
     this.dailyWages = dailyWages;
   }
+  void display(){
+    super.display();
+    System.out.println("Daily Wages: " + dailyWages);
+  }
 }
- 
+
+public class InstDatabase {
+  public static void main(String[] args){
+    Teacher t = new Teacher("T001", "Rohit", "Maths", "IEEE");
+    Officer o = new Officer("O001", "Rohan", "A");
+    RegularTypist rt = new RegularTypist("RT001", "Rohan", 100, 1000);
+    CasualTypist ct = new CasualTypist("CT001", "Rohan", 100, 100);
+    t.display();
+    o.display();
+    rt.display();
+    ct.display();
+  }
+}
