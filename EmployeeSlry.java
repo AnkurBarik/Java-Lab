@@ -39,6 +39,7 @@ class PartTimeEmployee extends Employee{
 public class EmployeeSlry{
   public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
+    Scanner sc2 = new Scanner(System.in);
     System.out.print("Enter the full time employee name: ");
     String Name = sc.nextLine();
     System.out.print("Enter "+Name+"'s employee ID: ");
@@ -46,16 +47,16 @@ public class EmployeeSlry{
     System.out.print("Enter "+Name+"'s monthly salary: ");
     double monthlySalary = sc.nextDouble();
     FullTimeEmployee fte = new FullTimeEmployee(Name, employeeId, monthlySalary);
-    System.out.println("Full Time Employee Name: " + fte.Name + ", Employee ID: " + fte.employeeId+", "+fte.Name+"'s Salary: " + fte.calculateSalary());
-    System.out.println("\nEnter the part time employee name: ");
-    String Name2 = sc.nextLine();
-    System.out.println("Enter "+Name2+"'s employee ID: ");
-    int employeeId2 = sc.nextInt();
-    System.out.println("Enter "+Name2+"'s monthly salary: ");
-    double monthlySalary2 = sc.nextDouble();
-    System.out.println("Enter "+Name2+"'s work hour: ");
-    int hoursWorked = sc.nextInt();
-    PartTimeEmployee pte = new PartTimeEmployee(Name2, employeeId2, monthlySalary2, hoursWorked);
-    System.out.println("Part Time Employee Name: " + pte.Name + ", Employee ID: " + pte.employeeId+", "+pte.Name+"'s Salary: " + pte.calculateSalary()+pte.Name+" has hours worked: "+pte.hoursWorked);
+    System.out.print("Full Time Employee Name: " + fte.Name + ", Employee ID: " + fte.employeeId+", "+fte.Name+"'s Salary: " + fte.calculateSalary());
+    System.out.print("\n\n\nEnter the part time employee name: ");
+    String Name2 = sc2.nextLine();
+    System.out.print("Enter "+Name2+"'s employee ID: ");
+    int employeeId2 = sc2.nextInt();
+    System.out.print("Enter "+Name2+"'s hourly rate: ");
+    double hr = sc.nextDouble();
+    System.out.print("Enter "+Name2+"'s work hour: ");
+    int hoursWorked = sc2.nextInt();
+    PartTimeEmployee pte = new PartTimeEmployee(Name2, employeeId2, hr, hoursWorked);
+    System.out.println("Part Time Employee Name: " + pte.Name + ", Employee ID: " + pte.employeeId+", "+pte.Name+"'s final salary: " + pte.calculateSalary()+", "+pte.Name+" has hours worked: "+pte.hoursWorked);
   }
 }
