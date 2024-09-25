@@ -1,3 +1,4 @@
+import java.util.*;
 class Employee{
   String Name;
   int employeeId;
@@ -37,9 +38,24 @@ class PartTimeEmployee extends Employee{
 }
 public class EmployeeSlry{
   public static void main(String[] args){
-    FullTimeEmployee fte = new FullTimeEmployee("Rudra", 1978, 1000);
-    PartTimeEmployee pte = new PartTimeEmployee("Sayan", 1543, 100, 10);
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter the full time employee name: ");
+    String Name = sc.nextLine();
+    System.out.print("Enter "+Name+"'s employee ID: ");
+    int employeeId = sc.nextInt();
+    System.out.print("Enter "+Name+"'s monthly salary: ");
+    double monthlySalary = sc.nextDouble();
+    FullTimeEmployee fte = new FullTimeEmployee(Name, employeeId, monthlySalary);
     System.out.println("Full Time Employee Name: " + fte.Name + ", Employee ID: " + fte.employeeId+", "+fte.Name+"'s Salary: " + fte.calculateSalary());
-    System.out.println("Part Time Employee Name: " + pte.Name + ", Employee ID: " + pte.employeeId+", "+pte.Name+"'s Salary: " + pte.calculateSalary());
+    System.out.println("\nEnter the part time employee name: ");
+    String Name2 = sc.nextLine();
+    System.out.println("Enter "+Name2+"'s employee ID: ");
+    int employeeId2 = sc.nextInt();
+    System.out.println("Enter "+Name2+"'s monthly salary: ");
+    double monthlySalary2 = sc.nextDouble();
+    System.out.println("Enter "+Name2+"'s work hour: ");
+    int hoursWorked = sc.nextInt();
+    PartTimeEmployee pte = new PartTimeEmployee(Name2, employeeId2, monthlySalary2, hoursWorked);
+    System.out.println("Part Time Employee Name: " + pte.Name + ", Employee ID: " + pte.employeeId+", "+pte.Name+"'s Salary: " + pte.calculateSalary()+pte.Name+" has hours worked: "+pte.hoursWorked);
   }
 }
