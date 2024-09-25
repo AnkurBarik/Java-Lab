@@ -6,7 +6,9 @@ class Employee{
     this.Name = Name;
     this.employeeId = employeeId;
   }
-  abstract double calculateSalary();
+  double calculateSalary(){
+    return 0;
+  }
   double calculateSalary(double bonus){
     return  calculateSalary()+bonus;
   }
