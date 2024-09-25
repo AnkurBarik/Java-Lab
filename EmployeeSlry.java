@@ -6,9 +6,7 @@ class Employee{
     this.Name = Name;
     this.employeeId = employeeId;
   }
-  double calculateSalary(){
-    return 0;
-  }
+  abstract double calculateSalary();
   double calculateSalary(double bonus){
     return  calculateSalary()+bonus;
   }
@@ -40,7 +38,8 @@ public class EmployeeSlry{
   public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
     Scanner sc2 = new Scanner(System.in);
-    System.out.print("Enter the full time employee name: ");
+    while(true){
+    System.out.print("\n\nEnter the full time employee name: ");
     String Name = sc.nextLine();
     System.out.print("Enter "+Name+"'s employee ID: ");
     int employeeId = sc.nextInt();
@@ -58,5 +57,6 @@ public class EmployeeSlry{
     int hoursWorked = sc2.nextInt();
     PartTimeEmployee pte = new PartTimeEmployee(Name2, employeeId2, hr, hoursWorked);
     System.out.println("Part Time Employee Name: " + pte.Name + ", Employee ID: " + pte.employeeId+", "+pte.Name+"'s final salary: " + pte.calculateSalary()+", "+pte.Name+" has hours worked: "+pte.hoursWorked);
+    }
   }
 }
