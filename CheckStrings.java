@@ -5,7 +5,7 @@ class NoMatchFound extends Exception{
   }
 }
 
-public class CheckString{
+public class CheckStrings{
   public static void main(String[] args){
     try{
       String inputString = args[0];
