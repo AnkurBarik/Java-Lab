@@ -16,5 +16,8 @@ public class BookHash{
     bookSet.add(new Book("Book3", "Author3"));
     bookSet.add(new Book("Book1", "Author1"));
     bookSet.add(new Book("Book2", "Author2"));
+    for (Book book : bookSet){
+      System.out.println(book);
+    }
   }
 }
