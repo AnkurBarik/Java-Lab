@@ -11,5 +11,10 @@ class Book{
 public class BookHash{
   public static void main(String[] args){
     Set <Book> bookSet = new HashSet<>();
+    bookSet.add(new Book("Book1", "Author1"));
+    bookSet.add(new Book("Book2", "Author2"));
+    bookSet.add(new Book("Book3", "Author3"));
+    bookSet.add(new Book("Book1", "Author1"));
+    bookSet.add(new Book("Book2", "Author2"));
   }
 }
