@@ -20,12 +20,12 @@ public class Assignment13{
 
   public boolean updateEmployee(int id, String newDepartment){
     Employee employee = employeeMap.get(id);
-    if (employee != null) { // Check if the employee exists
+    if (employee != null) {
       Employee updateEmployee = new Employee(employee.id(), employee.name(), newDepartment);
       employeeMap.put(id, updateEmployee);
-      return true; // Return true if the update was successful
+      return true;
     }
-    return false; // Return false if the employee was not found
+    return false;
   }
 
   public static void main(String[] args){
